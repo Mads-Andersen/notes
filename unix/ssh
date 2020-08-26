@@ -1,0 +1,9 @@
+Add key to agent
+ssh-add -k <file>.pem
+
+List keys
+ssh-add -L
+
+Remove key from agent
+ssh-keygen -y -f <file>.pem > <file>.pub
+ssh-add -d <file>.pub
