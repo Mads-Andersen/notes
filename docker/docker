@@ -1,0 +1,74 @@
+Pull image
+docker pull <IMAGE_NAME>
+
+List images
+docker images
+
+List all containers
+docker ps -a
+
+Run Image
+docker run <IMAGE_NAME>
+
+--detached --publish 
+docker run -d --name <CONTAINER_NAME> -p 80:80 <IMAGE_NAME>
+docker run -d --name <CONTAINER_NAME> -p <HOST:PORT>:<DOCKER_PORT> <IMAGE_NAME>
+
+Run inside image
+docker run -it <IMAGE_NAME> /bin/bash
+
+Run inside container
+docker exec -it <CONTAINER_NAME> /bin/bash
+
+Docker logs
+docker logs <CONTAINER_NAME>
+
+Start container
+docker start <CONTAINER_NAME>
+
+Create images from running container
+docker commit <CONTAINER_ID> <NEWNAME>
+
+Create image with Dockerfile
+docker build -t <IMAGE_NAME>:<TAG> .
+
+List networks
+docker network ls
+
+Inspect network
+docker network inspect <NAME>
+
+Create network
+docker network create --driver=bridge --subnet=<IP/RANGE> --gateway=<IP/RANGE> <NETWORK_NAME>
+
+Create volume
+docker volume create <NAME>
+
+Inspect volume - mountpoint
+docker volume inspect <NAME>
+
+Copy to volume
+cp <HOST_DIR_FILES> <VOLUME_MOUNTPOINT>
+
+Use volume
+docker run -d --mount source=<VOLUME_NAME>,target=<DIR_ON_IMAGE> <IMAGE>
+
+Export to see content
+# https://stackoverflow.com/questions/44769315/how-to-see-docker-image-contents
+docker export $(docker ps -lq) > <NAME_OF_TAR>.tar
+
+Dockerfile:
+FROM image based on
+ARG for arguments - use --build-arg when building image
+LABEL <NAME>=VALUE
+WORKDIR
+EXPOSE
+CMD
+
+
+Stop and remove all containers
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+Remove all images
+docker rmi $(docker images -a -q)
