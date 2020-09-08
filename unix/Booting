@@ -1,0 +1,19 @@
+Boot load order:
+1. BIOS (Basic Input/Output System)
+2. Bootloader (Example: GRUB)
+3. Kernel
+4. Init
+
+
+BIOS:
+Star the bootloader
+
+Bootloader:
+Boot into operating system and then load the kernel
+
+Init:
+Three different inits
+
+- System V init (sysv)
+- Upstart
+- Systemd
