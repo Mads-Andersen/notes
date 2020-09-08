@@ -1,0 +1,16 @@
+Programs:
+Rsyslog (logging)
+logrotate
+
+1: /var/log/messages:
+2: /var/log/syslog:
+1: This log contains all non-critical and non-debug messages
+2: This logs everything except auth messages
+
+
+Kernel:
+/var/log/dmesg
+/var/log/kern.log
+
+Auth:
+/var/log/auth.log
