@@ -1,0 +1,18 @@
+Create tar:
+tar cvf mytarfile.tar mycoolfile1 mycoolfile2
+
+c - create
+v - tell the program to be verbose and let us see what it's doing
+f - the filename of the tar file has to come after this option, if you are creating a tar file you'll have to come up with a name
+
+
+Unpack tar:
+tar xvf mytarfile.tar
+
+x - extract
+v - tell the program to be verbose and let us see what it's doing
+f - the file you want to extract
+
+Using gzip and gunzip (eXtract all Zee Files!):
+tar czf myfile.tar.gz
+tar xzf file.tar

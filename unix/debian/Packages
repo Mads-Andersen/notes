@@ -1,0 +1,10 @@
+Repository list
+/etc/apt/sources.list
+
+Install/remove package (no dependecies)
+dpkg -i some_deb_package.deb
+dpkg -r some_deb_package.deb
+
+Package managers (with dependecies)
+apt
+yum

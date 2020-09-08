@@ -1,0 +1,27 @@
+d | rwx | r-x | r-x 
+d = directory
+
+r: readable
+w: writable
+x: executable (basically an executable program)
+-: empty
+
+Examples:
+chmod u+x myfile
+chmod u-x myfile
+chmod ug+w myfile
+
+The numerical representations are seen below:
+4: read permission
+2: write permission
+1: execute permission
+
+Example:
+chmod 755 myfile
+
+7 = 4 + 2 + 1, so 7 is the user permissions and it has read, write and execute permissions
+5 = 4 + 1, the group has read and execute permissions
+5 = 4 +1, and all other users have read and execute permissions
+
+chown
+chgrp
